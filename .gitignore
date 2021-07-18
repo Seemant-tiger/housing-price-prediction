@@ -1,3 +1,34 @@
+# Ignore the .env file
+.env
+
+# ignore html files
+*.htm[l]
+
+# ignore log files
+**/logs/
+**/*.log
+
+# ignore joblib files
+*.joblib
+
+# ignore package version file
+**/_version.py
+
+# Ignore dataset and model folders
+data
+artifacts
+mlruns
+
+src/tigerml
+src/BayesFramework
+
+#conf/local
+**/credential*
+**/secret*
+
+# ignore code archive folder
+code-archives
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -11,7 +42,6 @@ __pycache__/
 build/
 develop-eggs/
 dist/
-downloads/
 eggs/
 .eggs/
 lib/
@@ -70,12 +100,18 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/source/_autosummary/
+docs_template/source/_autosummary
+docs_template/_build/
 
 # PyBuilder
 target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Pycharm folders
+.idea/
 
 # IPython
 profile_default/
@@ -117,6 +153,9 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+# Vscode project settings
+.vscode
+
 # mkdocs documentation
 /site
 
@@ -127,3 +166,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ignore vim swap files
+*.swp
+
+
+# credetials and tokens
+scripts/code_archive/token.pickle
+scripts/automatic_upload_to_gdrive/client_secrets.json
+scripts/automatic_upload_to_gdrive/*.txt
+scripts/code_archive/client_secrets.json
+scripts/code_archive/*.txt
+scripts/code_archive/*.zip
